@@ -1,0 +1,5 @@
+---
+- hosts: manager
+  roles:
+    - manager
+    - deployer

@@ -1,0 +1,7 @@
+version: "3.4"
+
+services:
+  app:
+    image: "gcr.io/chatter-web/app:${TAG:-latest}"
+    ports:
+      - 80:80
