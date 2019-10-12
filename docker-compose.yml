@@ -2,6 +2,6 @@ version: "3.4"
 
 services:
   app:
-    image: "gcr.io/chatter-web/app:${TAG:-latest}"
+    image: "gcr.io/gendall-c8f0e0/app:${TAG:-latest}"
     ports:
       - 80:80
