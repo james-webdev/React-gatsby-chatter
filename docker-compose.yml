@@ -2,6 +2,6 @@ version: "3.4"
 
 services:
   app:
-    image: "gcr.io/gendall-c8f0e0/app:${TAG:-latest}"
+    image: "gcr.io/gendall-447f96/app:${TAG}"
     ports:
       - 80:80
