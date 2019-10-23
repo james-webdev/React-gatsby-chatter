@@ -37,11 +37,19 @@ provider "local" {
 
 module "manager" {
   source  = "/etc/terraform/modules/digitalocean_droplet"
-  project = "chatter-web"
+  name    = "chatter-web-manager"
   env     = var.env
   group   = "chatter"
   size    = "s-1vcpu-1gb"
-  role    = "manager"
+}
+
+# accounts #
+
+module "deploy" {
+  source  = "/etc/terraform/modules/google_service_account"
+  roles   = [
+    "roles/storage.admin"
+  ]
 }
 
 # network #
@@ -64,5 +72,6 @@ module "inventory" {
   }
   tls_key  = module.dns.tls_key
   tls_cert = module.dns.tls_cert
+  deploy_token = module.deploy.token
   target   = var.output
 }
