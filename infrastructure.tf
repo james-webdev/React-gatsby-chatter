@@ -48,7 +48,7 @@ module "manager" {
 module "deploy" {
   source  = "/etc/terraform/modules/google_service_account"
   roles   = [
-    "roles/storage.admin"
+    "roles/storage.objectAdmin"
   ]
 }
 
