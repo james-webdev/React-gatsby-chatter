@@ -8,6 +8,11 @@ variable "output" {}
 
 # providers #
 
+provider "google" {
+  version = "~> 2.12"
+  project = var.project
+}
+
 provider "digitalocean" {
   version = "~> 1.6"
 }
@@ -38,8 +43,8 @@ provider "local" {
 module "manager" {
   source  = "/etc/terraform/modules/digitalocean_droplet"
   name    = "chatter-web-manager"
-  env     = var.env
   group   = "chatter"
+  env     = var.env
   size    = "s-1vcpu-1gb"
 }
 
