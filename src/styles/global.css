@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Windsor";
+  src: url(../../src/data/fonts/windsor/urw_-_windsord-ulthea-webfont.woff2);
+  font-style: normal;
+  font-weight: 100;
+}
+
+p {
+  font-family: Windsor;
+  font-weight: 100;
+}
