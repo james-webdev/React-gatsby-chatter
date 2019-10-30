@@ -13,9 +13,6 @@ const ProductsWrapper = styled.div`
 const Products = () => (
   <ProductsWrapper>
     <Grid container>
-      <Grid item lg={7}>
-        <HappyHolz />
-      </Grid>
       <Grid item lg={5}>
         <TextBlock
           content="With over 30 years of running agencies that create human 
