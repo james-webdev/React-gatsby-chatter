@@ -3,6 +3,9 @@ import WindsorUltraH from "../src/data/fonts/windsor/urw_-_windsord-ulthea-webfo
 
 export default createGlobalStyle`
 
+@import url(“https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css“);
+
+@import url(“https://use.typekit.net/tia2uvl.css“);
 
 @font-face {
     font-family: "Windsor";
@@ -11,9 +14,15 @@ export default createGlobalStyle`
     font-weight: 100;
   }
   
-  h1,h2 {
+  h1,h2,h3 {
     font-family: Windsor;
     font-weight: 100;
   }
   
+.testclass {
+  font-family: acumin-pro, sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
 `

@@ -1,10 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-
-import BackgroundSection from "./styledbackgroundsection"
+import AboutText from "./abouttext"
+import MEDIA from "../utils/mediatemplates"
 
 const AboutWrapper = styled.div`
-  height: 600px;
+  position: relative;
+  margin: solid 1px black;
+  bottom: 400px;
   .gatsby-image-wrapper {
     height: 100%;
     &:before {
@@ -15,8 +17,7 @@ const AboutWrapper = styled.div`
 
 const About = () => (
   <AboutWrapper>
-    {" "}
-    <BackgroundSection style={{ height: "600px" }}></BackgroundSection>
+    <AboutText />
   </AboutWrapper>
 )
 

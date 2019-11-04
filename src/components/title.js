@@ -7,7 +7,7 @@ const Text = styled.div`
   font-weight: bold;
 `
 
-const Title = ({ children, as = "span", size, color }) => {
+const Title = ({ children, as = "span", color }) => {
   return (
     <Text as={as} style={{ color: color }}>
       {children}

@@ -1,75 +1,51 @@
 import React from "react"
+import { useState } from "react"
 import styled from "styled-components"
 
-const Navigation = styled.nav`
-  position: relative;
-  background: #6699cc;
-  padding: 1rem;
+const Container = styled.div`
+  display: inline-block;
+  cursor: pointer;
 `
 
-const ToggleNav = styled.span`
-position: relative;
-z-index: 10;
-width: 4rem;
-height: 3.5rem;
-cursor: pointer;
-background: #6699cc;
-padding: 1rem;
-span {
-  text-indent: -9999px;
-  content: '';
-  position: absolute;
-  left: 0;
-  display: block;
-  text-indent: -9999px;
-  background-color: #fff;
-  height: .5rem;
-  width: 100%;
-  transition: background-color .3s ease-in-out, transform .5s ease-in-out, top .5s ease-in-out;
-  &:before, &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    display: block;
-    text-indent: -9999px;
-    background-color: #fff;
-    height: .5rem;
-    width: 100%;
-    transition: background-color .3s ease-in-out, transform .5s ease-in-out, top .5s ease-in-out;
+const Burger = styled.div`
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
   }
-  &:before{
-    top: 1rem;
+  &.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
   }
-  &:after {
-    top: 2rem;
-  }
-}
 
-
-
-.open & {
-  span {
-    transform: rotate(45deg);
-    top: 1.5rem;
-    &:before {
-      background-color transparent
-    }
-    &:after {
-      top 0
-      transform: rotate(-90deg);
-    }
+  &.change .bar2 {
+    opacity: 0;
   }
-}
+
+  &.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
 `
 
-const Span = styled.span``
+const BurgerMenu = () => {
+  const [nav, setNav] = useState(false)
+  const change = () => setNav(!nav)
+  return (
+    <div>
+      <Container>
+        <Burger className={nav ? "change" : " "} onClick={change}>
+          <div className="bar1"></div>
+          <div className="bar2"></div>
+          <div className="bar3"></div>
+        </Burger>
+      </Container>
+    </div>
+  )
+}
 
-const Burger = () => (
-  <Navigation>
-    <ToggleNav>
-      <span>Toggle navigation</span>
-    </ToggleNav>
-  </Navigation>
-)
-
-export default Burger
+export default BurgerMenu
