@@ -37,9 +37,10 @@ const Container = () => (
       <BackgroundSec2 />
     </AnimWrapper>
     <ContainerWrapper>
+      <Skedaddle />
+
       <Footer />
     </ContainerWrapper>
-    <Skedaddle />
   </div>
 )
 

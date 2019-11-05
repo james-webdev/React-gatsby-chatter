@@ -6,10 +6,15 @@ import TextBlock from "./textblock"
 import Title from "./title"
 import Button from "./button"
 import Img from "gatsby-image"
+import MEDIA from "../utils/mediatemplates"
 
 const SkedWrapper = styled.div`
   background-color: pink;
-  max-width: 100%;
+  ${MEDIA.PHONE`
+  font-size: 15px;
+  padding: 20px;
+
+`};
 `
 const Wrapper = styled.div`
   padding: 20px;
@@ -45,13 +50,15 @@ const Skedaddle = () => {
     <SkedWrapper>
       <Grid container justify="center" alignItems="center">
         <Grid item lg={4}>
-          <Wrapper>
-            <Img fluid={data.file.childImageSharp.fluid} alt="skedaddlelogo">
-              {" "}
-            </Img>
-          </Wrapper>
+          <Title as="h2" color="#3A4E6A">
+            Imagine yourself three hundred miles away in a cozy, countryside
+            retreat far from the humdrum of everyday life. Well, now you're just
+            three words closer to your dream break...
+          </Title>
         </Grid>
-        <Grid item lg={4}>
+      </Grid>
+      <Grid container>
+        <Grid item lg={6}>
           <TextBlock
             content="With over 30 years of running agencies that create human centric
      experiences, we set up Chatter to focus on innovating at the point when intelligent 
@@ -61,30 +68,29 @@ const Skedaddle = () => {
             content="voice is native to us, it provides a more 
      natural way of searching and communicating what we want."
           />
-        </Grid>
-        <Grid item lg={4}>
           <TextBlock
-            content="We create conversational experiences for brands and their customers,
-       enabling personality at scale in an increasingly automated world."
+            content="With over 30 years of running agencies that create human centric
+     experiences, we set up Chatter to focus on innovating at the point when intelligent 
+     voice technology and human behaviour meet."
           />
           <TextBlock
-            content="For brands this means being authentically involved in the world of their customers to provide support,
-      choice and vCommerce capabilities. Whilst for us as consumers we look for engagements that create an 
-emotional connection and add value to out lives."
+            content="With over 30 years of running agencies that create human centric
+     experiences, we set up Chatter to focus on innovating at the point when intelligent 
+     voice technology and human behaviour meet."
           />
-        </Grid>
-      </Grid>
-      <Grid container>
-        <Grid item lg={6}>
-          <Title as="h2" color="#3A4E6A">
-            "Hey Alexa ask Skedaddle to book me a holiday cottage..."
-          </Title>
         </Grid>
         <Grid item lg={2}>
           <Wrapper style={{ padding: "30px" }}>
-            <Button>Find out more</Button>
+            <Button>Let's chat Skdadl</Button>
           </Wrapper>
         </Grid>
+      </Grid>
+      <Grid item lg={4}>
+        <Wrapper>
+          <Img fluid={data.file.childImageSharp.fluid} alt="skedaddlelogo">
+            {" "}
+          </Img>
+        </Wrapper>
       </Grid>
     </SkedWrapper>
   )
