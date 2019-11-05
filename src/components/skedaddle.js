@@ -9,7 +9,8 @@ import Img from "gatsby-image"
 import MEDIA from "../utils/mediatemplates"
 
 const SkedWrapper = styled.div`
-  background-color: pink;
+  background-image: linear-gradient(pink, lightgreen);
+
   ${MEDIA.PHONE`
   font-size: 15px;
   padding: 20px;
@@ -49,11 +50,15 @@ const Skedaddle = () => {
   return (
     <SkedWrapper>
       <Grid container justify="center" alignItems="center">
-        <Grid item lg={4}>
+        <Grid item lg={6}>
           <Title as="h2" color="#3A4E6A">
             Imagine yourself three hundred miles away in a cozy, countryside
-            retreat far from the humdrum of everyday life. Well, now you're just
-            three words closer to your dream break...
+            retreat far from the humdrum of everyday life.
+          </Title>
+        </Grid>
+        <Grid item lg={6}>
+          <Title as="h2" color="#3A4E6A">
+            Well, now you're just three words closer to your dream break...
           </Title>
         </Grid>
       </Grid>

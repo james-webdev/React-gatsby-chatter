@@ -5,6 +5,7 @@ import Title from "./title"
 import MEDIA from "../utils/mediatemplates"
 
 const HeaderWrapper = styled.div`
+  border: solid 1px black;
   margin: 0 auto;
 `
 
