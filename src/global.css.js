@@ -3,7 +3,7 @@ import WindsorUltraH from "../src/data/fonts/windsor/urw_-_windsord-ulthea-webfo
 
 export default createGlobalStyle`
 
-@import url(“https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css“);
+
 
 @import url(“https://use.typekit.net/tia2uvl.css“);
 

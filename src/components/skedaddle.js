@@ -8,13 +8,8 @@ import Button from "./button"
 import Img from "gatsby-image"
 
 const SkedWrapper = styled.div`
-  padding-top: 300px;
-  position: relative;
-  margin-top: -320px;
-  z-index: -1;
-  background-color: #1bffb8;
+  background-color: pink;
   max-width: 100%;
-  height: 1100px;
 `
 const Wrapper = styled.div`
   padding: 20px;

@@ -1,10 +1,20 @@
 import React from "react"
 import styled from "styled-components"
 //import Grid from "@material-ui/core/Grid"
-import TwitterImg from "../images/twitter.png"
+import TwitterImg from "../images/twitter-icon.svg"
+import MEDIA from "../utils/mediatemplates"
 
 const TwitterWrapper = styled.div`
   padding: 25px;
+
+  img {
+    height: 35px;
+    width: 35px;
+  }
+
+  ${MEDIA.PHONE`
+  padding: 10px;
+  `};
 `
 
 const Twitter = () => (

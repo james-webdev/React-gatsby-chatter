@@ -10,10 +10,18 @@ const HeaderWrapper = styled.div`
 
 const TitleWrapper = styled.div`
   margin-top: 100px;
+  max-width: 70%;
+  h1 {
+    margin-bottom: 0px;
+    ${MEDIA.PHONE`
+    font-size: 2rem;
+
+  `};
+  }
   ${MEDIA.PHONE`
-  
-  position: relative;
-  bottom: 100px;
+    margin-top: 0px;
+    max-width: 100%;
+
   `};
 `
 // Transition animation
@@ -31,7 +39,7 @@ const Header = () => (
   <HeaderWrapper>
     <Nav />
     <TitleWrapper className="title">
-      <Title as="h2" color="#3A4E6A">
+      <Title as="h1" color="#3A4E6A">
         Hello. We're a voice technology company
       </Title>
     </TitleWrapper>

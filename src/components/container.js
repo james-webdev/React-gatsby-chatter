@@ -6,6 +6,7 @@ import Footer from "./footer"
 import BackgroundSection from "./backgroundsection"
 import BackgroundSec2 from "./backgroundsec2"
 import MEDIA from "../utils/mediatemplates"
+import Skedaddle from "../components/skedaddle"
 
 const ContainerWrapper = styled.div`
   margin: 0 auto;
@@ -19,8 +20,6 @@ const AnimWrapper = styled.div`
 const LottieWrapper = styled.div`
   margin: 0 auto;
   width: 100%;
-  position: relative;
-  bottom: 200px;
 `
 
 const Container = () => (
@@ -40,6 +39,7 @@ const Container = () => (
     <ContainerWrapper>
       <Footer />
     </ContainerWrapper>
+    <Skedaddle />
   </div>
 )
 

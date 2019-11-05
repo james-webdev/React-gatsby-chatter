@@ -1,10 +1,11 @@
 import React from "react"
 import styled from "styled-components"
+import MEDIA from "../utils/mediatemplates"
 
 const Text = styled.div`
-  margin-top: 30px;
-  margin-left: 15px;
-  font-weight: bold;
+  ${MEDIA.PHONE`
+    font-size: 36px;
+  `}
 `
 
 const Title = ({ children, as = "span", color }) => {

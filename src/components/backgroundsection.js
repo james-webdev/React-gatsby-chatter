@@ -5,18 +5,8 @@ import styled from "styled-components"
 import UncontrolledLottie from "./UncontrolledLottie"
 import MEDIA from "../utils/mediatemplates"
 
-const ImageWrapper = styled.span`
-  .gatsby-image-wrapper {
-    width: 100%;
-    height: 100px;
-    margin-top: 80px;
-  }
-  ${MEDIA.PHONE`
-  
-  height: 100px;
-  position: relative;
-  top: 50px;
-  `};
+const AnimationWrapper = styled.span`
+
 `
 
 const BackgroundSection = ({ className }) => (
@@ -37,9 +27,9 @@ const BackgroundSection = ({ className }) => (
       // Set ImageData.
       const imageData = data.desktop.childImageSharp.fluid
       return (
-        <ImageWrapper>
+        <AnimationWrapper>
           <UncontrolledLottie />
-        </ImageWrapper>
+        </AnimationWrapper>
       )
     }}
   />

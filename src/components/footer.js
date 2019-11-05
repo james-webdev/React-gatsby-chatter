@@ -5,8 +5,7 @@ import Twitter from "./twitter"
 import LinkedIn from "./linkedin"
 import Instagram from "./instagram"
 import Facebook from "./facebook"
-import Button from "./button"
-import BasicTextFields from "./form"
+import Title from "./title"
 
 const FooterWrapper = styled.div`
   height: 300px;
@@ -18,18 +17,22 @@ const ButtonWrapper = styled.div`
 const Footer = () => (
   <FooterWrapper>
     <Grid container>
-      <Grid item xs={6}>
+      <Grid item>
         <Twitter />
       </Grid>
-      <Grid item xs={6}>
+      <Grid item>
         <LinkedIn />
       </Grid>
-      <Grid item xs={6}>
+      <Grid item>
         <Instagram />
       </Grid>
-      <Grid item xs={6}>
+      <Grid item>
         <Facebook />
       </Grid>
+      <Title as="h2" color="#ee6f8f">
+        We're quite new so things are going to change around here. Keep checking
+        back in and for regular updates touch here.
+      </Title>
     </Grid>
   </FooterWrapper>
 )
