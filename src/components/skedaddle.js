@@ -7,16 +7,33 @@ import Title from "./title"
 import Button from "./button"
 import Img from "gatsby-image"
 import MEDIA from "../utils/mediatemplates"
+import SKD from "../images/skdadl-logo.svg"
+import AmaGoo from "./amagoo"
 
 const SkedWrapper = styled.div`
-  background-image: linear-gradient(pink, lightgreen);
-
+  background-image: linear-gradient(pink, lightblue);
   ${MEDIA.PHONE`
   font-size: 15px;
   padding: 20px;
+  `};
 
-`};
+  .alexaopen {
+    ${MEDIA.PHONE`
+  font-size: 28px;
+  font-weight: light;
+  span{
+    display: inline-block;
+    width: 111px;
+    height:25px;
+    margin-left: 5px;
+    background-repeat: no-repeat;
+    background-image: url('${SKD}');
+  }
+  
+ `};
+  
 `
+
 const Wrapper = styled.div`
   padding: 20px;
 `
@@ -64,28 +81,25 @@ const Skedaddle = () => {
       </Grid>
       <Grid container>
         <Grid item lg={6}>
+          <TextBlock customClass="alexaopen" content="Alexa, open" />
           <TextBlock
-            content="With over 30 years of running agencies that create human centric
-     experiences, we set up Chatter to focus on innovating at the point when intelligent 
-     voice technology and human behaviour meet."
+            content="skedadl is an exciting new voice skill that allows you to book your 
+            dream holiday cottage in just a few words without having to trawl through hundreds
+            of websites results. Powered by some of the leading holiday cottage booking engines, 
+            skedadl makes it super simple to book your perfect retreat without having to lift 
+            a finger. Just sit back and let skedadl do all the work for you."
           />
           <TextBlock
-            content="voice is native to us, it provides a more 
-     natural way of searching and communicating what we want."
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
           />
-          <TextBlock
-            content="With over 30 years of running agencies that create human centric
-     experiences, we set up Chatter to focus on innovating at the point when intelligent 
-     voice technology and human behaviour meet."
-          />
-          <TextBlock
-            content="With over 30 years of running agencies that create human centric
-     experiences, we set up Chatter to focus on innovating at the point when intelligent 
-     voice technology and human behaviour meet."
-          />
+          <TextBlock content="-Lorem ipsum dolor sit amet" />
+          <TextBlock content="-Lorem ipsum dolor sit amet" />
+          <TextBlock content="-Lorem ipsum dolor sit amet" />
+          <TextBlock content="-Lorem ipsum dolor sit amet" />
         </Grid>
         <Grid item lg={2}>
-          <Wrapper style={{ padding: "30px" }}>
+          <Wrapper style={{ padding: "30px", marginLeft: "25px" }}>
             <Button>Let's chat Skdadl</Button>
           </Wrapper>
         </Grid>
@@ -96,6 +110,7 @@ const Skedaddle = () => {
             {" "}
           </Img>
         </Wrapper>
+        <AmaGoo />
       </Grid>
     </SkedWrapper>
   )

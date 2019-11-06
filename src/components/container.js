@@ -7,10 +7,11 @@ import BackgroundSection from "./backgroundsection"
 import BackgroundSec2 from "./backgroundsec2"
 import MEDIA from "../utils/mediatemplates"
 import Skedaddle from "../components/skedaddle"
+import Hero from "../components/hero"
 
 const ContainerWrapper = styled.div`
   margin: 0 auto;
-  width: 80%;
+  width: 85%;
 `
 
 const AnimWrapper = styled.div`
@@ -21,12 +22,20 @@ const LottieWrapper = styled.div`
   margin: 0 auto;
   width: 100%;
 `
+const TitleWrapper = styled.div`
+  ${MEDIA.PHONE`
+   margin-bottom: 10px;
+   width: 85%;
+`}
+`
 
 const Container = () => (
   <div>
+    <Header />
     <ContainerWrapper>
-      <Header />
+      <Hero />
     </ContainerWrapper>
+
     <LottieWrapper>
       <BackgroundSection />
     </LottieWrapper>
@@ -36,7 +45,17 @@ const Container = () => (
     <AnimWrapper>
       <BackgroundSec2 />
     </AnimWrapper>
+
     <ContainerWrapper>
+      <TitleWrapper>
+        <div
+          id="Products"
+          style={{ color: "#EE6D8E", fontSize: "25px", fontFamily: "Windsor" }}
+        >
+          Products
+        </div>
+      </TitleWrapper>
+
       <Skedaddle />
 
       <Footer />

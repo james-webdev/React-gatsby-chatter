@@ -11,8 +11,11 @@ const TextWrapper = styled.div`
 `
 
 const TextBlock = props => (
-  <TextWrapper className="testclass">
-    <p>{props.content}</p>
+  <TextWrapper className={props.customClass}>
+    <p>
+      {props.content}
+      <span></span>
+    </p>
   </TextWrapper>
 )
 

@@ -5,10 +5,12 @@ import LogoGif from "../images/chatter_logo_loop.gif"
 import MEDIA from "../utils/mediatemplates"
 
 const LogoWrapper = styled.div`
-  max-width: 400px;
+  max-width: 160px;
   margin-top: 20px;
   ${MEDIA.PHONE`
-  width: 80%;
+  display: flex;
+  max-width: 160px;
+  order: 0;
   `};
 `
 

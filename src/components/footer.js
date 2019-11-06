@@ -6,9 +6,17 @@ import LinkedIn from "./linkedin"
 import Instagram from "./instagram"
 import Facebook from "./facebook"
 import Title from "./title"
+import { Link } from "gatsby"
+import MiniChatter from "./minichat"
 
 const FooterWrapper = styled.div`
   height: 300px;
+  margin-top: 30px;
+
+  .link {
+    text-decoration: none;
+    color: lightblue;
+  }
 `
 
 const ButtonWrapper = styled.div`
@@ -31,8 +39,12 @@ const Footer = () => (
       </Grid>
       <Title as="h2" color="#ee6f8f">
         We're quite new so things are going to change around here. Keep checking
-        back in and for regular updates touch here.
+        back in and for regular updates link{" "}
+        <Link className="link" to="">
+          touch here.{" "}
+        </Link>
       </Title>
+      <MiniChatter />
     </Grid>
   </FooterWrapper>
 )

@@ -9,6 +9,9 @@ import styled from "styled-components"
 const ImageWrapper = styled.div`
   .gatsby-image-wrapper {
     height: 900px;
+    ${MEDIA.PHONE`
+    height: 500px;
+  `}
   }
   .titleWrapper {
     display: flex;
@@ -23,7 +26,7 @@ const ImageWrapper = styled.div`
         margin-top: 14vw;
       `}
       ${MEDIA.PHONE`
-        margin-top: 52vw;
+        margin-top: 25vw;
       `}
     }
   }

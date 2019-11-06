@@ -1,49 +1,42 @@
 import React from "react"
 import styled from "styled-components"
-import Nav from "./nav"
-import Title from "./title"
 import MEDIA from "../utils/mediatemplates"
+import SiteLogo from "../components/logo"
+import Nav from "./nav"
+import Burger from "./burger"
 
 const HeaderWrapper = styled.div`
-  border: solid 1px black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 85%;
   margin: 0 auto;
-`
 
-const TitleWrapper = styled.div`
-  margin-top: 100px;
-  max-width: 70%;
-  h1 {
-    margin-bottom: 0px;
-    ${MEDIA.PHONE`
-    font-size: 2rem;
-
-  `};
-  }
   ${MEDIA.PHONE`
-    margin-top: 0px;
-    max-width: 100%;
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: unset;
 
-  `};
+`};
 `
-// Transition animation
-//h2 {
-//  opacity: 0
-//  transform: translateY(20px);
-//  transition: all 0.2s ease-in-out 0.2s;
-//}
-//h2.loaded{
-//  opacity: 1
-//  tranform: translateY(0px);
-//}
+const LogoBurgerWrapper = styled.div`
+  display: flex;
+  ${MEDIA.PHONE`
+justify-content: space-between;
+align-items: center;
+width: 85%;
+margin: 0 auto;
+`}
+`
 
 const Header = () => (
   <HeaderWrapper>
     <Nav />
-    <TitleWrapper className="title">
-      <Title as="h1" color="#3A4E6A">
-        Hello. We're a voice technology company
-      </Title>
-    </TitleWrapper>
+    <LogoBurgerWrapper>
+      <SiteLogo />
+      <Burger />
+    </LogoBurgerWrapper>
   </HeaderWrapper>
 )
 

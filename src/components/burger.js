@@ -1,6 +1,7 @@
 import React from "react"
 import { useState } from "react"
 import styled from "styled-components"
+import MEDIA from "../utils/mediatemplates"
 
 const Container = styled.div`
   display: inline-block;
@@ -8,12 +9,28 @@ const Container = styled.div`
 `
 
 const Burger = styled.div`
-  .bar1,
-  .bar2,
+  display: none;
+  ${MEDIA.PHONE`
+  display: block;
+`}
+  .bar1 {
+    width: 35px;
+    height: 2px;
+    background-color: lightblue;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  .bar2 {
+    width: 20px;
+    height: 2px;
+    background-color: #3a4e6a;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
   .bar3 {
     width: 35px;
-    height: 5px;
-    background-color: black;
+    height: 2px;
+    background-color: #ee6f8f;
     margin: 6px 0;
     transition: 0.4s;
   }
