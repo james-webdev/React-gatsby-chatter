@@ -1,52 +1,94 @@
 import React from "react"
-import styled from "styled-components"
-import Grid from "@material-ui/core/Grid"
-import { Link } from "gatsby"
+import styled, { ThemeProvider } from "styled-components"
 import MEDIA from "../utils/mediatemplates"
 import Button from "./button"
+import { TweenLite, ScrollToPlugin } from "gsap/all";
+const plugins = [ TweenLite, ScrollToPlugin ];
 
 const NavWrapper = styled.div`
   order: 1;
-
-  ${MEDIA.PHONE`
-  background-color:#3a4e6a;
   display: flex;
-  height: 250px;
+  flex-wrap: wrap;
+  ${MEDIA.TABLET`
+  background-color:#3a4e6a;
+  
+  height: ${props => props.theme.menuOpen ? '250px' : '0'};
+  transition: height 0.2s cubic-bezier(0.130, 0.485, 0.365, 0.895);
+  transition-delay: ${props => props.theme.menuOpen ? '0' : '0.2s'};
   order: -1;
   flex-direction: column;
   align-content: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
   `};
   .link {
-    ${MEDIA.PHONE`
+    font-size: 14px;
+    text-decoration: none;
+    color: rgb(58, 78, 106);
+    margin-right: 1.3rem;
+    display: flex;
+    align-items: center;
+
+    ${MEDIA.TABLET`
     color: white;
     margin: 0.6rem auto;
-    text-decoration: none;
+    
     font-size: 14px;
-    text-align: center;
+    opacity: ${props => props.theme.menuOpen ? '1' : '0'};
+    pointer-events: ${props => props.theme.menuOpen ? 'all' : 'none'};
+    transition: opacity 0.2s linear;
+    transition-delay: ${props => props.theme.menuOpen ? '0.2s' : '0'};
     `}
   }
   button {
-    ${MEDIA.PHONE`
+    ${MEDIA.TABLET`
     color: white;
     margin: 0.6rem auto;
     text-decoration: none;
     font-size: 14px;
     text-align: center;
+    display: block;
+    opacity: ${props => props.theme.menuOpen ? '1' : '0'};
+    pointer-events: ${props => props.theme.menuOpen ? 'all' : 'none'};
+    transition: opacity 0.2s linear;
+    transition-delay: ${props => props.theme.menuOpen ? '0.2s' : '0'};
     `}
   }
 `
 
-const Nav = () => (
-  <NavWrapper>
-    <Link className="link">About Chatter</Link>
-    <Link className="link" to="/about/">
-      Introducing Products
-    </Link>
-    <Link className="link" to="/contact/">
-      Keep up to date
-    </Link>
-    <Button className="button"> Chat to us </Button>
-  </NavWrapper>
-)
+const Nav = ({menuOpen, aboutRef, introRef, contactRef}) => {
+
+  const refs = {
+    aboutRef: aboutRef,
+    introRef: introRef,
+    contactRef: contactRef
+  }
+
+  const handleLinkClick = (e, refName) => {
+    if (e)
+    {
+      e.preventDefault();
+    }
+    const ref = refs[refName];
+    TweenLite.to(window, 0.2, {scrollTo:{y: ref, autoKill: false}});
+  }
+
+  return (
+    <ThemeProvider theme={{menuOpen: menuOpen}}>
+        <NavWrapper>
+          <a className="link" onClick={e => handleLinkClick(e, 'aboutRef')}>
+            About Chatter
+          </a>
+          <a className="link" onClick={e => handleLinkClick(e, 'introRef')}>
+            Introducing Products
+          </a>
+          <a className="link" onClick={e => handleLinkClick(e, 'contactRef')}>
+            Keep up to date
+          </a>
+          <Button className="button" href="mailto:greg@chatter.studio"> Chat to us </Button>
+        </NavWrapper>
+    </ThemeProvider>
+  )
+}
 export default Nav

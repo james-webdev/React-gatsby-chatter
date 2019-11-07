@@ -3,6 +3,7 @@ import { useState } from "react"
 import styled from "styled-components"
 import MEDIA from "../utils/mediatemplates"
 
+
 const Container = styled.div`
   display: inline-block;
   cursor: pointer;
@@ -10,7 +11,7 @@ const Container = styled.div`
 
 const Burger = styled.div`
   display: none;
-  ${MEDIA.PHONE`
+  ${MEDIA.TABLET`
   display: block;
 `}
   .bar1 {
@@ -36,7 +37,7 @@ const Burger = styled.div`
   }
   &.change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-4px, 6px);
   }
 
   &.change .bar2 {
@@ -45,17 +46,16 @@ const Burger = styled.div`
 
   &.change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
   }
 `
 
-const BurgerMenu = () => {
+const BurgerMenu = ({menuOpen, onClick}) => {
   const [nav, setNav] = useState(false)
-  const change = () => setNav(!nav)
   return (
     <div>
       <Container>
-        <Burger className={nav ? "change" : " "} onClick={change}>
+        <Burger className={menuOpen ? "change" : " "} onClick={onClick}>
           <div className="bar1"></div>
           <div className="bar2"></div>
           <div className="bar3"></div>

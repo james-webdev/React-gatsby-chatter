@@ -15,9 +15,9 @@ const AboutWrapper = styled.div`
   }
 `
 
-const About = () => (
+const About = ({setRef}) => (
   <AboutWrapper>
-    <AboutText />
+    <AboutText setRef={setRef} />
   </AboutWrapper>
 )
 

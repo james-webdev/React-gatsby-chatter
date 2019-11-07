@@ -20,11 +20,12 @@ const AboutTextWrapper = styled.div`
   `};
 `
 
-const AboutText = () => (
+const AboutText = ({setRef}) => (
   <AboutTextWrapper>
     <div
       id="about"
       style={{ color: "#EE6D8E", fontSize: "25px", fontFamily: "Windsor" }}
+      ref={setRef}
     >
       About Chatter
     </div>

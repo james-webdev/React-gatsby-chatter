@@ -22,8 +22,10 @@ const FooterWrapper = styled.div`
 const ButtonWrapper = styled.div`
   padding: 15px;
 `
-const Footer = () => (
-  <FooterWrapper>
+const Footer = ({setRef}) => {
+
+  return (
+    <FooterWrapper>
     <Grid container>
       <Grid item>
         <Twitter />
@@ -37,17 +39,21 @@ const Footer = () => (
       <Grid item>
         <Facebook />
       </Grid>
-      <Title as="h2" color="#ee6f8f">
-        We're quite new so things are going to change around here. Keep checking
-        back in and for regular updates link{" "}
-        <Link className="link" to="">
-          touch here.{" "}
-        </Link>
-      </Title>
+      <div ref={setRef}>
+        <Title as="h2" color="#ee6f8f">
+          We're quite new so things are going to change around here. Keep checking
+          back in and for regular updates link{" "}
+          <Link className="link" to="">
+            touch here.{" "}
+          </Link>
+        </Title>
+      </div>
       <MiniChatter />
     </Grid>
   </FooterWrapper>
-)
+  )
+  
+}
 
 export default Footer
 

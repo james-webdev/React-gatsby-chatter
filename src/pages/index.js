@@ -8,5 +8,3 @@ export default () => (
     <Container />
   </div>
 )
-
-// Some graphql query
