@@ -23,8 +23,8 @@ const LottieWrapper = styled.div`
   width: 100%;
 `
 const TitleWrapper = styled.div`
-  color: #EE6D8E; 
-  font-size: 25px; 
+  color: #dc537c;
+  font-size: 25px;
   font-family: "Windsor";
   margin-bottom: 30px;
 
@@ -36,7 +36,6 @@ const TitleWrapper = styled.div`
 `
 
 const Container = () => {
-
   // const [refs, setRefs] = useState([]);
 
   // const setRef = (ref) => {
@@ -44,19 +43,19 @@ const Container = () => {
   //   // console.log('ref', ref);
   // }
 
-  const [aboutRef, setAboutRef] = useState();
-  const [introRef, setIntroRef] = useState();
-  const [contactRef, setContactRef] = useState();
+  const [aboutRef, setAboutRef] = useState()
+  const [introRef, setIntroRef] = useState()
+  const [contactRef, setContactRef] = useState()
 
-  const handleAboutRef = (ref) => {
-    setAboutRef(ref);
+  const handleAboutRef = ref => {
+    setAboutRef(ref)
   }
-  const handleIntroRef = (ref) => {
-    setIntroRef(ref);
+  const handleIntroRef = ref => {
+    setIntroRef(ref)
   }
 
-  const handleContactRef = (ref) => {
-    setContactRef(ref);
+  const handleContactRef = ref => {
+    setContactRef(ref)
   }
 
   return (
@@ -78,10 +77,7 @@ const Container = () => {
 
       <ContainerWrapper>
         <TitleWrapper>
-          <div
-            id="Products"
-            ref={handleIntroRef}
-          >
+          <div id="Products" ref={handleIntroRef}>
             Products
           </div>
         </TitleWrapper>
@@ -92,7 +88,6 @@ const Container = () => {
       </ContainerWrapper>
     </div>
   )
-  
 }
 
 export default Container

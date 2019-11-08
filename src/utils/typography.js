@@ -11,7 +11,7 @@ const typography = new Typography({
   baseLineHeight: 1.57,
   scaleRatio: 5.04,
   paragraphSpacing: 2.38,
-  //headerFontFamily: ["windsor_outline_dregular", "sans-serif"],
+  headerFontFamily: ["Windsor", "sans-serif"],
   bodyFontFamily: ["Open Sans", "sans-serif"],
   // See below for the full list of options.
 })

@@ -20,6 +20,7 @@ const AboutTextWrapper = styled.div`
     column-count: 2;
     column-gap: 2rem;
     column-fill: balance;
+    color: #403c64;
     ${MEDIA.PHONE`
       column-count: unset;
       column-gap: unset;
@@ -29,7 +30,7 @@ const AboutTextWrapper = styled.div`
 `
 
 const H3 = styled.h3`
-  color: #ee6d8e;
+  color: #dc537c;
   font-family: "Windsor";
 `
 

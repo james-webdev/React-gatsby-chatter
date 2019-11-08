@@ -7,7 +7,6 @@ const AboutWrapper = styled.div`
   position: relative;
   margin: solid 1px black;
   bottom: 400px;
-  background-color: red;
   .gatsby-image-wrapper {
     height: 100%;
     &:before {

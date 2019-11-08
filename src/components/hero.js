@@ -26,7 +26,7 @@ const TitleWrapper = styled.div`
 `
 const Hero = () => (
   <TitleWrapper className="title">
-    <Title as="h1" color="#3A4E6A">
+    <Title as="h1" color="#403C64">
       Hello. We're a voice technology company
     </Title>
   </TitleWrapper>

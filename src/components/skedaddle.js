@@ -95,63 +95,68 @@ const StyledButton = styled.div`
   display: block;
 `
 
+const Intro = styled.div`
+  p {
+    font-size: 40.52px;
+    line-height: 45px;
+    font-family: "Windsor", sans-serif;
+    color: #403c64;
+    ${MEDIA.PHONE`
+      font-size: 25px;
+      line-height: 32px;
+    `}
+  }
+`
+
 const Skedaddle = () => (
   <SkedWrapper>
-    <Grid container justify="center" alignItems="center">
-      <Grid item lg={6}>
-        <Title>
-          Imagine yourself three hundred miles away in a cozy, countryside
-          retreat far from the humdrum of everyday life.
-        </Title>
-      </Grid>
-      <Grid item lg={6}>
-        <Title>
-          Well, now you're just three words closer to your dream break...
-        </Title>
-      </Grid>
-    </Grid>
-    <Grid container>
-      <Grid item lg={6}>
-        <Tagline />
+    <Intro>
+      <p>
+        Imagine yourself three hundred miles away in a cozy, countryside retreat
+        far from the humdrum of everyday life.
+      </p>
+      <p> Well, now you're just three words closer to your dream break...</p>
+    </Intro>
 
-        <StyledCopy>
-          <StyledCopyLeft>
-            <p>
-              skedadl is an exciting new voice skill that allows you to book
-              your dream holiday cottage in just a few words without having to
-              trawl through hundreds of websites results. Powered by some of the
-              leading holiday cottage booking engines, skedadl makes it super
-              simple to book your perfect retreat without having to lift a
-              finger. Just sit back and let skedadl do all the work for you.
-            </p>
-          </StyledCopyLeft>
-          <StyledCopyRight>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </p>
-            <p>
-              -Lorem ipsum dolor sit amet
-              <br />
-              -Lorem ipsum dolor sit amet
-              <br />
-              -Lorem ipsum dolor sit amet
-              <br />
-              -Lorem ipsum dolor sit amet
-              <br />
-            </p>
-          </StyledCopyRight>
-        </StyledCopy>
-      </Grid>
-      <StyledButton>
-        <Button>Let's chat Skdadl</Button>
-      </StyledButton>
-    </Grid>
-    <Grid item lg={4}>
-      <img className="logo-with-strap" src={SkdadlWithStrap} alt="skdadl" />
+    <Tagline />
 
-      <AmaGoo />
+    <StyledCopy>
+      <StyledCopyLeft>
+        <p>
+          Skdadl is a personalised voice experience that enables holiday makers
+          to search for, book and enjoy their perfect UK holiday using a Google
+          Assistant or Alexa device. ‘Alexa, Open Skdadl' - is all it takes to
+          activate the experience, and start your journey to a relaxing short
+          break.
+        </p>
+      </StyledCopyLeft>
+      <StyledCopyRight>
+        <p>
+          Powered by some of the leading holiday cottage agencies, Skdadl makes
+          it simple to search for and book your perfect retreat without having
+          to left a finger.
+        </p>
+        <p>Just sit back and let Skdadl do all of the work.</p>
+        <p>
+          – Personalised voice experience with results tailored to you
+          <br />
+          – Real time cottage booking availability
+          <br />
+          – Recognised and trusted holiday brands
+          <br />
+          – Search Last minute, Luxury and dog friendly cottages
+          <br />
+        </p>
+      </StyledCopyRight>
+    </StyledCopy>
+    <StyledButton>
+      <Button>Let's chat Skdadl</Button>
+    </StyledButton>
+    <Grid container direction="column" justify="center">
+      <Grid item lg={6}>
+        <img className="logo-with-strap" src={SkdadlWithStrap} alt="skdadl" />
+        <AmaGoo />
+      </Grid>
     </Grid>
   </SkedWrapper>
 )
