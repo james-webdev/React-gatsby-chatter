@@ -10,9 +10,9 @@ import Tagline from "./tagline"
 import SkdadlWithStrap from "../images/skdadl-with-strap.svg"
 
 const SkedWrapper = styled.div`
-  background-image: linear-gradient(pink, lightblue);
+  background-image: linear-gradient(#33B3CB, #B6DEE1);
   padding: 50px;
-  border-radius: 20px;
+  border-radius: 10px;
 
   .logo-with-strap {
     width: 200px;

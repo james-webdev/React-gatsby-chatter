@@ -5,10 +5,9 @@ import MEDIA from "../utils/mediatemplates"
 
 const AboutTextWrapper = styled.div`
   margin-top: 100px;
-  max-width: 70%;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-
   ${MEDIA.PHONE`
   max-width: 100%; 
   margin-top: 0px;
@@ -17,39 +16,51 @@ const AboutTextWrapper = styled.div`
   padding-right: 5px;
 
   `};
+  .column-content {
+    column-count: 2;
+    column-gap: 2rem;
+    column-fill: balance;
+    ${MEDIA.PHONE`
+      column-count: unset;
+      column-gap: unset;
+      column-fill: unset;
+    `}
+  }
+`
+
+const H3 = styled.h3`
+  color: #ee6d8e;
+  font-family: "Windsor";
 `
 
 const AboutText = ({ setRef }) => (
   <AboutTextWrapper>
-    <div
-      id="about"
-      style={{ color: "#EE6D8E", fontSize: "25px", fontFamily: "Windsor" }}
-      ref={setRef}
-    >
+    <H3 id="about" ref={setRef}>
       About Chatter
+    </H3>
+    <div className="column-content">
+      <p>
+        With over 30 years of running agencies that create human centric
+        experiences, we set up Chatter to focus on innovating at the point when
+        intelligent voice technology and human behaviour meet.
+      </p>
+      <p>
+        Voice is native to us, it provides a more natural way of searching and
+        communicating what we want.
+      </p>
+
+      <p>
+        We create conversational experiences for brands and their customers,
+        enabling personality at scale in an increasingly automated world.
+      </p>
+
+      <p>
+        For brands this means being authentically involved in the world of their
+        customers to provide support, choice and vCommerce capabilities. Whilst
+        for us as consumers we look for engagements that create an emotional
+        connection and add value to out lives.
+      </p>
     </div>
-
-    <TextBlock
-      content="With over 30 years of running agencies that create human centric experiences, 
-        we set up Chatter to focus on innovating at the point when intelligent voice technology 
-        and human behaviour meet."
-    />
-    <TextBlock
-      content=" Voice is native to us, it provides a more natural way of searching
-         and communicating what we want."
-    />
-
-    <TextBlock
-      content="We create conversational experiences for brands and their customers, enabling personality 
-at scale in an increasingly automated world."
-    />
-
-    <TextBlock
-      className="testclass"
-      content="For brands this means being authentically involved in the world of their customers to provide support,
-choice and vCommerce capabilities. Whilst for us as consumers we look for engagements that create an 
-emotional connection and add value to out lives."
-    />
   </AboutTextWrapper>
 )
 

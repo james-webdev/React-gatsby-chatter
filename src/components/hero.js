@@ -13,7 +13,9 @@ const TitleWrapper = styled.div`
     max-width: 70%;
     ${MEDIA.PHONE`
     font-size: 2rem;
-
+    margin-top: 50px;
+    max-width: 100%;
+    margin-bottom: 76px;
   `};
   }
   ${MEDIA.PHONE`
@@ -22,17 +24,6 @@ const TitleWrapper = styled.div`
 
   `};
 `
-// Transition animation
-//h2 {
-//  opacity: 0
-//  transform: translateY(20px);
-//  transition: all 0.2s ease-in-out 0.2s;
-//}
-//h2.loaded{
-//  opacity: 1
-//  tranform: translateY(0px);
-//}
-
 const Hero = () => (
   <TitleWrapper className="title">
     <Title as="h1" color="#3A4E6A">

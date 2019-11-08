@@ -1,73 +1,47 @@
 import React from "react"
-import { graphql, StaticQuery } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
+import MiddleAnimation from "../components/middle-animation"
 import MEDIA from "../utils/mediatemplates"
 
 import Title from "./title"
 import styled from "styled-components"
 
-const ImageWrapper = styled.div`
-  .gatsby-image-wrapper {
-    height: 900px;
-    ${MEDIA.PHONE`
-    height: 500px;
-  `}
-  }
+const AnimationWrapper = styled.div`
+  position: relative;
   .titleWrapper {
+    position: absolute;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    margin: 0 auto;
-    width: 80%;
+    top: 0%;
+    ${MEDIA.PHONE`
+        
+    `}
+    ${MEDIA.TABLET`
+        
+    `}
     h2 {
-      margin-top: 9vw;
-      ${MEDIA.TABLET`
-        margin-top: 14vw;
-      `}
-      ${MEDIA.PHONE`
-        margin-top: 25vw;
-      `}
+      margin-left: 0;
+      max-width: 80%;
     }
+  }
+  .middle-animation-wrapper {
+    ${MEDIA.PHONE`
+      transform: scale(2);
+      margin: 5rem auto;
+  `}
   }
 `
 
-const BackgroundSec2 = ({ className }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        desktop: file(relativePath: { eq: "stripe_1.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 1920) {
-              src
-              originalName
-            }
-          }
-        }
-      }
-    `}
-    render={data => {
-      // Set ImageData.
-      const imageData = data.desktop.childImageSharp.fluid
-      return (
-        <ImageWrapper>
-          <BackgroundImage
-            Tag="div"
-            className={className}
-            fluid={imageData}
-            backgroundColor={`transparent`}
-            width={`100%`}
-          >
-            <div className="titleWrapper">
-              <Title as="h2" color="white">
-                where intelligent voice technology
-              </Title>
-            </div>
-          </BackgroundImage>
-        </ImageWrapper>
-      )
-    }}
-  />
+const BackgroundSec2 = () => (
+  <AnimationWrapper>
+    <MiddleAnimation />
+    <div className="titleWrapper">
+      <Title as="h2" color="white">
+        We innovate where intelligent voice technology and human behaviour meet.
+      </Title>
+    </div>
+  </AnimationWrapper>
 )
 
 export default BackgroundSec2
