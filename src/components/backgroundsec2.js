@@ -31,10 +31,17 @@ const TitleWrapper = styled.div`
     margin-bottom: 0px;
     color: white;
     text-align: center;
+    ${MEDIA.PHONE`
+  font-size: 25px;
+  line-height: 32px;
+  text-align: left;
+  min-width: 310px;
+`}
   }
   ${MEDIA.PHONE`
-        
-    `}
+  top: 52px;
+`}
+
   ${MEDIA.TABLET`
         
     `}

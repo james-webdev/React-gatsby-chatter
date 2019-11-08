@@ -5,10 +5,14 @@ import MiniChat from "../images/chatter-logo-mini.svg"
 
 const MiniWrapper = styled.div`
   padding: 25px;
+  height: 100px;
+  width: 120px;
+  margin: 0 auto;
   ${MEDIA.PHONE`
   padding: 10px;
   height: 100px;
   width: 120px;
+  margin-left: 0;
   `};
 `
 

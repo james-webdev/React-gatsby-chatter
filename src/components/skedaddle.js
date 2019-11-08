@@ -91,6 +91,16 @@ const Features = styled.ul`
   margin-left: 1rem;
 `
 
+const Strapline = styled.div`
+  max-width: 50%;
+  margin: 0 auto;
+  display: grid:
+  grid-template-columns: 1fr 1fr;
+  ${MEDIA.PHONE`
+    max-width: 90%;
+  `}
+`
+
 const Skedaddle = () => (
   <SkedWrapper>
     <Intro>
@@ -131,12 +141,12 @@ const Skedaddle = () => (
     <StyledButton>
       <Button>Let's chat Skdadl</Button>
     </StyledButton>
-    <Grid container direction="column" justify="center">
-      <Grid item lg={6}>
+    <Strapline>
+      <div>
         <img className="logo-with-strap" src={SkdadlWithStrap} alt="skdadl" />
         <AmaGoo />
-      </Grid>
-    </Grid>
+      </div>
+    </Strapline>
   </SkedWrapper>
 )
 

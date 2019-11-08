@@ -47,13 +47,16 @@ const SocialLinks = styled.div`
   display: flex;
   align-itmems: center;
   justify-content: space-between;
-  max-width: 69%;
+  max-width: 20%;
   margin-left: 0;
   margin-top: 1rem;
   margin-bottom: 1rem;
   img {
     margin-bottom: 0;
   }
+  ${MEDIA.PHONE`
+  max-width: 69%;
+  `}
 `
 
 const Footer = ({ setRef }) => {
