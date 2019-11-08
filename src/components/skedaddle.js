@@ -56,12 +56,10 @@ const StyledCopy = styled.div`
   grid-gap: 2rem;
   max-width: 69%;
   margin: 0 auto;
-  div {
-  }
 
   ${MEDIA.PHONE`
     display: block;
-
+    max-width: 90%;
     div {
       width: 100%;
     }
@@ -91,8 +89,11 @@ const Intro = styled.div`
     ${MEDIA.PHONE`
       font-size: 25px;
       line-height: 32px;
+      text-align: unset;
     `}
   }
+  ${MEDIA.PHONE`
+  max-width: 90%;`}
 `
 const Features = styled.ul`
   margin-left: 1rem;
