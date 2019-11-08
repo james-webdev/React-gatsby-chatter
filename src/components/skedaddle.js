@@ -51,12 +51,12 @@ const Title = styled.h2`
 `
 
 const StyledCopy = styled.div`
-  display: flex;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  max-width: 69%;
+  margin: 0 auto;
   div {
-    width: 50%;
-    flex-shrink: 0;
-    flex-grow: 0;
   }
 
   ${MEDIA.PHONE`
@@ -65,22 +65,6 @@ const StyledCopy = styled.div`
     div {
       width: 100%;
     }
-  `}
-`
-
-const StyledCopyLeft = styled.div`
-  margin-right: 10px;
-
-  ${MEDIA.PHONE`
-    margin: 0;
-  `}
-`
-
-const StyledCopyRight = styled.div`
-  margin-left: 10px;
-
-  ${MEDIA.PHONE`
-    margin: 0;
   `}
 `
 
@@ -95,11 +79,15 @@ const StyledButton = styled.div`
 `
 
 const Intro = styled.div`
+  max-width: 69%;
+  margin: 0 auto;
+  padding: 2rem 0;
   p {
     font-size: 40.52px;
     line-height: 45px;
     font-family: "Windsor", sans-serif;
     color: #403c64;
+    text-align: center;
     ${MEDIA.PHONE`
       font-size: 25px;
       line-height: 32px;
@@ -123,7 +111,7 @@ const Skedaddle = () => (
     <Tagline />
 
     <StyledCopy>
-      <StyledCopyLeft>
+      <div>
         <p>
           Skdadl is a personalised voice experience that enables holiday makers
           to search for, book and enjoy their perfect UK holiday using a Google
@@ -131,13 +119,13 @@ const Skedaddle = () => (
           activate the experience, and start your journey to a relaxing short
           break.
         </p>
-      </StyledCopyLeft>
-      <StyledCopyRight>
         <p>
           Powered by some of the leading holiday cottage agencies, Skdadl makes
           it simple to search for and book your perfect retreat without having
           to left a finger.
         </p>
+      </div>
+      <div>
         <p>Just sit back and let Skdadl do all of the work.</p>
         <Features>
           <li>Personalised voice experience with results tailored to you.</li>
@@ -145,7 +133,7 @@ const Skedaddle = () => (
           <li>Recognised and trusted holiday brands.</li>
           <li>Search Last minute, Luxury and dog friendly cottages.</li>
         </Features>
-      </StyledCopyRight>
+      </div>
     </StyledCopy>
     <StyledButton>
       <Button>Let's chat Skdadl</Button>
