@@ -37,11 +37,7 @@ const SkedWrapper = styled.div`
     margin-left: 5px;
     background-repeat: no-repeat;
     background-image: url('${SKD}');
-  }
-
-  
-  
- `};
+  }`};
 `
 
 const Title = styled.h2`
@@ -93,6 +89,9 @@ const StyledButton = styled.div`
   padding: 50px 0;
   width: 100%;
   display: block;
+  button {
+    text-transform: capitalize;
+  }
 `
 
 const Intro = styled.div`
@@ -106,6 +105,9 @@ const Intro = styled.div`
       line-height: 32px;
     `}
   }
+`
+const Features = styled.ul`
+  margin-left: 1rem;
 `
 
 const Skedaddle = () => (
@@ -137,16 +139,12 @@ const Skedaddle = () => (
           to left a finger.
         </p>
         <p>Just sit back and let Skdadl do all of the work.</p>
-        <p>
-          – Personalised voice experience with results tailored to you
-          <br />
-          – Real time cottage booking availability
-          <br />
-          – Recognised and trusted holiday brands
-          <br />
-          – Search Last minute, Luxury and dog friendly cottages
-          <br />
-        </p>
+        <Features>
+          <li>Personalised voice experience with results tailored to you.</li>
+          <li>Real time cottage booking availability.</li>
+          <li>Recognised and trusted holiday brands.</li>
+          <li>Search Last minute, Luxury and dog friendly cottages.</li>
+        </Features>
       </StyledCopyRight>
     </StyledCopy>
     <StyledButton>

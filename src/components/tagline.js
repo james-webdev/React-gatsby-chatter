@@ -22,7 +22,7 @@ const StyledTagline = styled.div`
 `
 
 const StyledTitle = styled.div`
-  margin-right: 20px;
+  margin-right: 10px;
   font-size: 25px;
   line-height: 39px;
   color: #403c64;
