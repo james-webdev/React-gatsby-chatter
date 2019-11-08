@@ -93,7 +93,9 @@ const Intro = styled.div`
     `}
   }
   ${MEDIA.PHONE`
-  max-width: 90%;`}
+  max-width: 90%;
+  padding-top: 1rem;
+  `}
 `
 const Features = styled.ul`
   margin-left: 1rem;
