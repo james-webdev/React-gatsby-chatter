@@ -3,5 +3,8 @@ version: "3.4"
 services:
   app:
     image: "gcr.io/gendall-447f96/app:${TAG}"
+    build: .
     ports:
-      - 80:80
+      - 8000:8000
+    environment:
+      - NODE_ENV=${ENV}
