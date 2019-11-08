@@ -5,12 +5,15 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "develop": "gatsby develop -H 0.0.0.0",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "ssr": "npm run build && npm run serve",
+    "start": "npm run develop",
+    "format": "prettier --config ./.prettierrc --write src/**/*.js",
+    "build:dir": "mkdirp ./public/icons/",
+    "build:favicons": "node scripts/favicons",
+    "build": "npm run build:dir && npm run build:favicons && gatsby build",
+    "test": "ava **/*.test.js --verbose"
   },
   "dependencies": {
     "@material-ui/core": "^4.5.1",
