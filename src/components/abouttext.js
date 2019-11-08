@@ -4,7 +4,7 @@ import TextBlock from "./textblock"
 import MEDIA from "../utils/mediatemplates"
 
 const AboutTextWrapper = styled.div`
-  margin-top: 100px;
+  margin-top: 0px;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;

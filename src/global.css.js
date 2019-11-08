@@ -11,9 +11,6 @@ export default createGlobalStyle`
     font-style: normal;
     font-weight: 100;
   }
-  body{
-    overflow-x: hidden;
-  }
   h1,h2,h3 {
     font-family: Windsor;
     font-weight: 100;
