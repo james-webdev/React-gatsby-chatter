@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 import { makeStyles } from "@material-ui/core/styles"
 import Button from "@material-ui/core/Button"
 
@@ -25,7 +24,12 @@ export default function ContainedButtons({ href, children }) {
   const classes = useStyles()
 
   return (
-    <Button variant="contained" color="danger" className={classes.button} href={href}>
+    <Button
+      variant="contained"
+      color="danger"
+      className={classes.button}
+      href={href}
+    >
       {children}
     </Button>
   )

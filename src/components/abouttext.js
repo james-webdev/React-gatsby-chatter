@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Grid from "@material-ui/core/Grid"
 import TextBlock from "./textblock"
 import MEDIA from "../utils/mediatemplates"
 
@@ -20,7 +19,7 @@ const AboutTextWrapper = styled.div`
   `};
 `
 
-const AboutText = ({setRef}) => (
+const AboutText = ({ setRef }) => (
   <AboutTextWrapper>
     <div
       id="about"

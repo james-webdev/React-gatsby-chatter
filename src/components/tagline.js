@@ -26,15 +26,12 @@ const StyledTitle = styled.div`
 `
 
 const Tagline = () => {
-
-    return (
-        <StyledTagline>
-            <StyledTitle>
-                Alexa, open
-            </StyledTitle>
-            <img src={SkdadlWithoutStrap} />
-        </StyledTagline>
-    )
+  return (
+    <StyledTagline>
+      <StyledTitle>Alexa, open</StyledTitle>
+      <img src={SkdadlWithoutStrap} alt="Skdadl logo" />
+    </StyledTagline>
+  )
 }
 
-export default Tagline;
+export default Tagline

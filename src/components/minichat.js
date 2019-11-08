@@ -1,7 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-//import Grid from "@material-ui/core/Grid"
-import InstagramImg from "../images/instagram.png"
 import MEDIA from "../utils/mediatemplates"
 import MiniChat from "../images/chatter-logo-mini.svg"
 
@@ -16,8 +14,8 @@ const MiniWrapper = styled.div`
 
 const MiniChatter = () => (
   <MiniWrapper>
-    <a href="">
-      <img src={MiniChat} />
+    <a href="mailto:studio@gendall.co.uk">
+      <img src={MiniChat} alt="chatter icon logo" />
     </a>
   </MiniWrapper>
 )

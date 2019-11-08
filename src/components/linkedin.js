@@ -14,7 +14,7 @@ const LinkedInWrapper = styled.div`
 const LinkedIn = () => (
   <LinkedInWrapper>
     <a href="http://www.linkedin.com">
-      <img src={LinkedInImg} />
+      <img src={LinkedInImg} alt="linkedin logo" />
     </a>
   </LinkedInWrapper>
 )

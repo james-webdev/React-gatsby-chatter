@@ -15,7 +15,7 @@ const Facebook = () => (
   <FbWrapper>
     <a href="http://www.facebook.com">
       {" "}
-      <img src={FacebookImg} />
+      <img src={FacebookImg} alt="facebook logo" />
     </a>
   </FbWrapper>
 )

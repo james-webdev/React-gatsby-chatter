@@ -20,7 +20,7 @@ const TwitterWrapper = styled.div`
 const Twitter = () => (
   <TwitterWrapper>
     <a href="http://www.twitter.com">
-      <img src={TwitterImg} />
+      <img src={TwitterImg} alt="twitter logo" />
     </a>
   </TwitterWrapper>
 )

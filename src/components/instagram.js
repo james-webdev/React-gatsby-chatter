@@ -14,7 +14,7 @@ const InstaWrapper = styled.div`
 const Instagram = () => (
   <InstaWrapper>
     <a href="http://www.instagram.com">
-      <img src={InstagramImg} />
+      <img src={InstagramImg} alt="instagram logo" />
     </a>
   </InstaWrapper>
 )

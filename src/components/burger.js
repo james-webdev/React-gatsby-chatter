@@ -1,8 +1,6 @@
 import React from "react"
-import { useState } from "react"
 import styled from "styled-components"
 import MEDIA from "../utils/mediatemplates"
-
 
 const Container = styled.div`
   display: inline-block;
@@ -50,8 +48,7 @@ const Burger = styled.div`
   }
 `
 
-const BurgerMenu = ({menuOpen, onClick}) => {
-  const [nav, setNav] = useState(false)
+const BurgerMenu = ({ menuOpen, onClick }) => {
   return (
     <div>
       <Container>

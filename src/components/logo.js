@@ -16,7 +16,7 @@ const LogoWrapper = styled.div`
 
 const SiteLogo = () => (
   <LogoWrapper>
-    <img src={LogoGif} />
+    <img src={LogoGif} alt="chatter logo" />
   </LogoWrapper>
 )
 

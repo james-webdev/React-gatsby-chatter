@@ -1,17 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
-import { useStaticQuery, graphql } from "gatsby"
-import TextBlock from "./textblock"
 import Button from "./button"
-import Img from "gatsby-image"
+
 import MEDIA from "../utils/mediatemplates"
 import SKD from "../images/skdadl-logo.svg"
 import AmaGoo from "./amagoo"
 import Tagline from "./tagline"
 import SkdadlWithStrap from "../images/skdadl-with-strap.svg"
-
-
 
 const SkedWrapper = styled.div`
   background-image: linear-gradient(pink, lightblue);
@@ -99,88 +95,65 @@ const StyledButton = styled.div`
   display: block;
 `
 
-const Skedaddle = () => {
-  const data = useStaticQuery(graphql`
-    query MyQuery {
-      allImageSharp {
-        edges {
-          node {
-            id
-          }
-        }
-      }
-      file(
-        relativePath: { eq: "skedaddle.png" }
-        childImageSharp: { children: {}, fluid: {} }
-      ) {
-        childImageSharp {
-          fluid {
-            aspectRatio
-            base64
-            sizes
-            src
-            srcSet
-          }
-        }
-      }
-    }
-  `)
-  return (
-    <SkedWrapper>
-      <Grid container justify="center" alignItems="center">
-        <Grid item lg={6}>
-          <Title>
-              Imagine yourself three hundred miles away in a cozy, countryside
-              retreat far from the humdrum of everyday life.
-          </Title>
-        </Grid>
-        <Grid item lg={6}>
-          <Title>
-            Well, now you're just three words closer to your dream break...
-          </Title>
-        </Grid>
+const Skedaddle = () => (
+  <SkedWrapper>
+    <Grid container justify="center" alignItems="center">
+      <Grid item lg={6}>
+        <Title>
+          Imagine yourself three hundred miles away in a cozy, countryside
+          retreat far from the humdrum of everyday life.
+        </Title>
       </Grid>
-      <Grid container>
-        <Grid item lg={6}>
-          <Tagline/>
-          
-          <StyledCopy>
-            <StyledCopyLeft>
-                <p>
-                  skedadl is an exciting new voice skill that allows you to book your 
-                  dream holiday cottage in just a few words without having to trawl through hundreds
-                  of websites results. Powered by some of the leading holiday cottage booking engines, 
-                  skedadl makes it super simple to book your perfect retreat without having to lift 
-                  a finger. Just sit back and let skedadl do all the work for you.
-                </p>
-            </StyledCopyLeft>
-            <StyledCopyRight>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                </p>
-                <p>
-                  -Lorem ipsum dolor sit amet<br/>
-                  -Lorem ipsum dolor sit amet<br/>
-                  -Lorem ipsum dolor sit amet<br/>
-                  -Lorem ipsum dolor sit amet<br/>
-                </p>
-            </StyledCopyRight>
-          </StyledCopy>
-          
-        </Grid>
-        <StyledButton>
-          <Button>Let's chat Skdadl</Button>
-        </StyledButton>
+      <Grid item lg={6}>
+        <Title>
+          Well, now you're just three words closer to your dream break...
+        </Title>
       </Grid>
-      <Grid item lg={4}>
-        
-          <img className="logo-with-strap" src={SkdadlWithStrap} alt="skdadl" />
-        
-        <AmaGoo />
+    </Grid>
+    <Grid container>
+      <Grid item lg={6}>
+        <Tagline />
+
+        <StyledCopy>
+          <StyledCopyLeft>
+            <p>
+              skedadl is an exciting new voice skill that allows you to book
+              your dream holiday cottage in just a few words without having to
+              trawl through hundreds of websites results. Powered by some of the
+              leading holiday cottage booking engines, skedadl makes it super
+              simple to book your perfect retreat without having to lift a
+              finger. Just sit back and let skedadl do all the work for you.
+            </p>
+          </StyledCopyLeft>
+          <StyledCopyRight>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam
+            </p>
+            <p>
+              -Lorem ipsum dolor sit amet
+              <br />
+              -Lorem ipsum dolor sit amet
+              <br />
+              -Lorem ipsum dolor sit amet
+              <br />
+              -Lorem ipsum dolor sit amet
+              <br />
+            </p>
+          </StyledCopyRight>
+        </StyledCopy>
       </Grid>
-    </SkedWrapper>
-  )
-}
+      <StyledButton>
+        <Button>Let's chat Skdadl</Button>
+      </StyledButton>
+    </Grid>
+    <Grid item lg={4}>
+      <img className="logo-with-strap" src={SkdadlWithStrap} alt="skdadl" />
+
+      <AmaGoo />
+    </Grid>
+  </SkedWrapper>
+)
 
 export default Skedaddle

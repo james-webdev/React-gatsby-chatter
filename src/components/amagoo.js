@@ -25,8 +25,8 @@ const Wrapper = styled.div`
 
 const AmaGoo = () => (
   <Wrapper>
-      <img src={AmazonImg} />   
-      <img  src={GoogleImg} />
+    <img src={AmazonImg} alt="amazon echo logo" />
+    <img src={GoogleImg} alt="google alexa logo" />
   </Wrapper>
 )
 
