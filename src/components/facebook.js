@@ -5,10 +5,19 @@ import FacebookImg from "../images/facebook.png"
 import MEDIA from "../utils/mediatemplates"
 
 const FbWrapper = styled.div`
-  padding: 25px;
-  ${MEDIA.PHONE`
-  padding: 10px;
-  `};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 25px;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  img {
+    max-width: 35px;
+    max-height: 35px;
+  }
 `
 
 const Facebook = () => (

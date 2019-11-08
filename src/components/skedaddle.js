@@ -40,16 +40,6 @@ const SkedWrapper = styled.div`
   }`};
 `
 
-const Title = styled.h2`
-  color: #413d68;
-  text-align: center;
-
-  ${MEDIA.PHONE`
-    font-size: 36px;
-    text-align: left;
-  `}
-`
-
 const StyledCopy = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;

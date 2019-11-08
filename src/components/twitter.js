@@ -5,16 +5,21 @@ import TwitterImg from "../images/twitter-icon.svg"
 import MEDIA from "../utils/mediatemplates"
 
 const TwitterWrapper = styled.div`
-  padding: 25px;
-
-  img {
-    height: 35px;
-    width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  margin-right: 25px;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-
-  ${MEDIA.PHONE`
-  padding: 10px;
-  `};
+  img {
+    min-width: 35px;
+    max-width: 35px;
+    max-height: 35px;
+  }
 `
 
 const Twitter = () => (

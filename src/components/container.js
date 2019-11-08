@@ -61,6 +61,7 @@ const Container = () => {
   return (
     <div>
       <Header aboutRef={aboutRef} introRef={introRef} contactRef={contactRef} />
+
       <ContainerWrapper>
         <Hero />
       </ContainerWrapper>
@@ -68,9 +69,11 @@ const Container = () => {
       <LottieWrapper>
         <BackgroundSection />
       </LottieWrapper>
+
       <ContainerWrapper>
         <AboutText setRef={handleAboutRef} />
       </ContainerWrapper>
+
       <AnimWrapper>
         <BackgroundSec2 />
       </AnimWrapper>
