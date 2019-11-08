@@ -7,6 +7,7 @@ const AboutWrapper = styled.div`
   position: relative;
   margin: solid 1px black;
   bottom: 400px;
+  background-color: red;
   .gatsby-image-wrapper {
     height: 100%;
     &:before {
@@ -15,7 +16,7 @@ const AboutWrapper = styled.div`
   }
 `
 
-const About = ({setRef}) => (
+const About = ({ setRef }) => (
   <AboutWrapper>
     <AboutText setRef={setRef} />
   </AboutWrapper>

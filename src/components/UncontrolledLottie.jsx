@@ -15,9 +15,9 @@ class UncontrolledLottie extends Component {
     }
 
     return (
-      <div>
-        <Lottie options={defaultOptions}  />
-      </div>
+      <>
+        <Lottie options={defaultOptions} />
+      </>
     )
   }
 }
