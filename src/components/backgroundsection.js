@@ -4,12 +4,13 @@ import UncontrolledLottie from "./UncontrolledLottie"
 import MEDIA from "../utils/mediatemplates"
 
 const AnimationWrapper = styled.span`
-border: 5px solid red;
-div{
+  div {
     ${MEDIA.PHONE`
-    transform: scale(2.8) translateX(-8%);
+    position: relative;
+    z-index: -1;
+    transform: scale(2.8) translateX(8%);
   `}
-}
+  }
 `
 const BackgroundSection = () => (
   <AnimationWrapper>
