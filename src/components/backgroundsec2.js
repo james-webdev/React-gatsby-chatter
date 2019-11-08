@@ -20,41 +20,17 @@ const TitleWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 50%;
+  top: 43%;
   transform: translate(-50%);
   max-width: 100%;
   left: 50%;
-  ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    max-width: 100%;
-    li {
-      font-family: "Windsor", sans-serif;
-      font-size: 5.04rem;
-      line-height: 1.1;
-      color: white;
-      list-style: none;
-      animation: wordFading 3s infinite;
-      transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-      margin: 0 20px;
-      position: absolute;
-      left: 50%;
-      width: 100vw;
-      text-align: center;
-      transform: translate(-50%);
-      background-color: #453b63;
-      &.first {
-        animation-delay: 2s;
-      }
-      &.second {
-        animation-delay: 8s;
-      }
-      &.third {
-        animation-delay: 12s;
-      }
-    }
+  p {
+    font-size: 40.52px;
+    line-height: 45px;
+    font-family: "Windsor", sans-serif;
+    margin-bottom: 0px;
+    color: white;
+    text-align: center;
   }
   ${MEDIA.PHONE`
         
@@ -62,15 +38,28 @@ const TitleWrapper = styled.div`
   ${MEDIA.TABLET`
         
     `}
-  @keyframes wordFading {
+  @keyframes wordFading1 {
     0% {
       opacity: 0;
     }
-    50% {
+    100% {
       opacity: 1;
     }
-    100% {
+  }
+  @keyframes wordFading2 {
+    0% {
       opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes wordFading3 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 `
@@ -79,11 +68,9 @@ const BackgroundSec2 = () => (
   <AnimationWrapper>
     <MiddleAnimation />
     <TitleWrapper>
-      <ul>
-        <li className="first">We innovate where</li>
-        <li className="second">intelligent voice technology</li>
-        <li className="third">and human behaviour meet.</li>
-      </ul>
+      <p>
+        We innovate where intelligent voice technology and human behaviour meet.
+      </p>
     </TitleWrapper>
   </AnimationWrapper>
 )
