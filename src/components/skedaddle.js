@@ -98,8 +98,8 @@ const Strapline = styled.div`
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
   ${MEDIA.PHONE`
     max-width: 90%;
   `}
