@@ -1,31 +1,31 @@
 import React from "react"
-import { makeStyles } from "@material-ui/core/styles"
-import Button from "@material-ui/core/Button"
+import styled from "styled-components"
 
-const useStyles = makeStyles(theme => ({
-  button: {
-    margin: theme.spacing(1),
-    padding: "10px 20px",
-    background: "#EE6D8E",
-    color: "white",
-    border: "none",
-    borderRadius: "110px 100px 100px 100px",
-    fontSize: "12px",
-    textTransform: "lowercase",
-    width: "140px",
-    boxShadow: "none",
-  },
-  input: {
-    display: "none",
-  },
-}))
+const NavButton = styled.button`
+  margin: 0.6rem;
+  padding: 10px 20px;
+  background: #ee6d8e;
+  color: white;
+  border: none;
+  border-radius: 110px 100px 100px 100px;
+  font-size: 12px;
+  text-transform: lowercase;
+  width: 140px;
+  box-shadow: none;
+  a {
+    text-transform: Capitalize;
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+`
 
-export default function ContainedButtons({ href, children }) {
-  const classes = useStyles()
+const ContainedButtons = ({ href }) => (
+  <NavButton href={href}>
+    <a href={href}>Chat To Us</a>
+  </NavButton>
+)
 
-  return (
-    <Button variant="contained" className={classes.button} href={href}>
-      {children}
-    </Button>
-  )
-}
+export default ContainedButtons

@@ -50,9 +50,11 @@ const NavWrapper = styled.div`
     display: block;
     opacity: ${props => (props.theme.menuOpen ? "1" : "0")};
     pointer-events: ${props => (props.theme.menuOpen ? "all" : "none")};
-    transition: opacity 0.2s linear;
-    transition-delay: ${props => (props.theme.menuOpen ? "0.2s" : "0")};
+    transition: opacity 0.1s linear;
+    transition-delay: ${props => (props.theme.menuOpen ? "0.1s" : "0")};
     `}
+    ${MEDIA.PHONE`
+    margin: 0.6rem auto;`}
   }
 `
 
@@ -95,10 +97,7 @@ const Nav = ({ menuOpen, aboutRef, introRef, contactRef }) => {
         >
           Keep up to date
         </a>
-        <Button className="button" href="mailto:greg@chatter.studio">
-          {" "}
-          Chat to us{" "}
-        </Button>
+        <Button></Button>
       </NavWrapper>
     </ThemeProvider>
   )

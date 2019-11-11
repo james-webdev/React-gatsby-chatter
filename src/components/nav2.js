@@ -1,7 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Button from "./button"
-import { Link } from "gatsby"
 import MEDIA from "../utils/mediatemplates"
 import NavMenuBurger from "./nav"
 
@@ -14,11 +12,6 @@ const NavWrapper = styled.div`
   `};
   }
   ${MEDIA.PHONE`
-  `};
-`
-const BurgerWrapper = styled.div`
-  border: solid 1px black;
-  ${MEDIA.TABLET`
   `};
 `
 
