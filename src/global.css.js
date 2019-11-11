@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 import WindsorUltraH from "../src/data/fonts/windsor/urw_-_windsord-ulthea-webfont.woff2"
+import MEDIA from "./utils/mediatemplates"
 
 export default createGlobalStyle`
 
@@ -17,4 +18,9 @@ export default createGlobalStyle`
   }
 }
 
+body{
+  ${MEDIA.PHONE`
+  
+`}
+}
 `

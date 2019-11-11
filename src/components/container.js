@@ -17,6 +17,7 @@ const ContainerWrapper = styled.div`
 const AnimWrapper = styled.div`
   max-width: 100%;
   overflow-x: hidden !important;
+  overflow-y: hidden;
 `
 
 const LottieWrapper = styled.div`
