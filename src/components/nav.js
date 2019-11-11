@@ -2,7 +2,9 @@ import React from "react"
 import styled, { ThemeProvider } from "styled-components"
 import MEDIA from "../utils/mediatemplates"
 import Button from "./button"
-import { TweenLite } from "gsap/all"
+// import { TweenMax } from "gsap/all"
+import { TweenMax } from "gsap/umd/TweenMax";
+import ScrollToPlugin from "gsap/umd/ScrollToPlugin";
 
 const NavWrapper = styled.div`
   order: 1;
@@ -10,7 +12,7 @@ const NavWrapper = styled.div`
   flex-wrap: wrap;
   ${MEDIA.TABLET`
   background-color:#3a4e6a;
-  
+
   height: ${props => (props.theme.menuOpen ? "250px" : "0")};
   transition: height 0.2s cubic-bezier(0.130, 0.485, 0.365, 0.895);
   transition-delay: ${props => (props.theme.menuOpen ? "0" : "0.2s")};
@@ -32,7 +34,7 @@ const NavWrapper = styled.div`
     ${MEDIA.TABLET`
     color: white;
     margin: 0.6rem auto;
-    
+
     font-size: 14px;
     opacity: ${props => (props.theme.menuOpen ? "1" : "0")};
     pointer-events: ${props => (props.theme.menuOpen ? "all" : "none")};
@@ -68,7 +70,7 @@ const Nav = ({ menuOpen, aboutRef, introRef, contactRef }) => {
       e.preventDefault()
     }
     const ref = refs[refName]
-    TweenLite.to(window, 0.2, { scrollTo: { y: ref, autoKill: false } })
+    TweenMax.to(window, 0.2, { scrollTo: { y: ref, autoKill: false } })
   }
 
   return (
