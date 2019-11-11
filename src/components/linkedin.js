@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import LinkedInImg from "../images/linked.png"
-import MEDIA from "../utils/mediatemplates"
 
 const LinkedInWrapper = styled.div`
   display: flex;

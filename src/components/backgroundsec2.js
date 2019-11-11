@@ -2,7 +2,6 @@ import React from "react"
 import MiddleAnimation from "../components/middle-animation"
 import MEDIA from "../utils/mediatemplates"
 
-import Title from "./title"
 import styled from "styled-components"
 
 const AnimationWrapper = styled.div`

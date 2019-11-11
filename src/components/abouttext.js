@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import TextBlock from "./textblock"
 import MEDIA from "../utils/mediatemplates"
 
 const AboutTextWrapper = styled.div`

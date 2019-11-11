@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import FacebookImg from "../images/facebook.png"
-import MEDIA from "../utils/mediatemplates"
 
 const FbWrapper = styled.div`
   display: flex;
