@@ -17,7 +17,7 @@ module.exports = {
       options: {
         custom: {
           families: ["Windsor", "My Other Font:n4,i4,n7"],
-          urls: ["./static/fonts/windsor/stylesheet.css"],
+          urls: ["./fonts/windsor/stylesheet.css"],
         },
         typekit: {
           id: "tia2uvl",
