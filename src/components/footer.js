@@ -5,7 +5,7 @@ import Twitter from "./twitter"
 import LinkedIn from "./linkedin"
 import Instagram from "./instagram"
 import Facebook from "./facebook"
-import { Link } from "gatsby"
+
 import MiniChatter from "./minichat"
 
 const FooterWrapper = styled.div`
@@ -72,9 +72,9 @@ const Footer = ({ setRef }) => {
           <p>
             We're quite new so things are going to change around here. Keep
             checking back in and for regular updates link{" "}
-            <Link className="link" to="mailto:greg@chatter.voice">
-              touch here.{" "}
-            </Link>
+            <a className="link" href="mailto:greg@chatter.studio">
+              touch here.
+            </a>
           </p>
         </FooterText>
       </div>
