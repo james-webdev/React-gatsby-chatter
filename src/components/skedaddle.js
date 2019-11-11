@@ -41,7 +41,9 @@ const SkedWrapper = styled.div`
 `
 
 const StyledCopy = styled.div`
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 2rem 1fr;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
   max-width: 69%;
@@ -94,7 +96,9 @@ const Features = styled.ul`
 const Strapline = styled.div`
   max-width: 50%;
   margin: 0 auto;
-  display: grid:
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   ${MEDIA.PHONE`
     max-width: 90%;
