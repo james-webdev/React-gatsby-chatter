@@ -21,7 +21,7 @@ const AnimationWrapper = styled.div`
   `}
   }
   ${MEDIA.PHONE`
-    height: 200px;
+    height: 220px;
   `}
 `
 const BackgroundSection = () => (

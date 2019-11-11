@@ -24,12 +24,7 @@ export default function ContainedButtons({ href, children }) {
   const classes = useStyles()
 
   return (
-    <Button
-      variant="contained"
-      color="danger"
-      className={classes.button}
-      href={href}
-    >
+    <Button variant="contained" className={classes.button} href={href}>
       {children}
     </Button>
   )
