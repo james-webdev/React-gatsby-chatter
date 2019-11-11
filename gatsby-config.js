@@ -19,9 +19,11 @@ module.exports = {
           families: ["Windsor", "My Other Font:n4,i4,n7"],
           urls: ["../static/fonts/windsor/stylesheet.css"],
         },
+        typekit: {
+          id: "tia2uvl",
+        },
       },
     },
-
     {
       resolve: "gatsby-source-filesystem",
       options: {
