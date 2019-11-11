@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Grid from "@material-ui/core/Grid"
 import Button from "./button"
 import { Link } from "gatsby"
 import MEDIA from "../utils/mediatemplates"

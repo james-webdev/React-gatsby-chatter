@@ -13,7 +13,7 @@ const TitleWrapper = styled.div`
     max-width: 70%;
     ${MEDIA.PHONE`
     font-size: 2rem;
-    margin-top: 50px;
+    margin-top: 50%;
     max-width: 100%;
     margin-bottom: 76px;
   `};

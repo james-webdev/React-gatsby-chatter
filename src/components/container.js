@@ -13,6 +13,9 @@ const ContainerWrapper = styled.div`
   margin: 0 auto;
   width: 85%;
 `
+const WindowWrapper = styled.div`
+  min-height: 100vh;
+`
 
 const AnimWrapper = styled.div`
   max-width: 100%;
@@ -62,15 +65,21 @@ const Container = () => {
 
   return (
     <div>
-      <Header aboutRef={aboutRef} introRef={introRef} contactRef={contactRef} />
+      <WindowWrapper>
+        <Header
+          aboutRef={aboutRef}
+          introRef={introRef}
+          contactRef={contactRef}
+        />
 
-      <ContainerWrapper>
-        <Hero />
-      </ContainerWrapper>
+        <ContainerWrapper>
+          <Hero />
+        </ContainerWrapper>
 
-      <LottieWrapper>
-        <BackgroundSection />
-      </LottieWrapper>
+        <LottieWrapper>
+          <BackgroundSection />
+        </LottieWrapper>
+      </WindowWrapper>
 
       <ContainerWrapper>
         <AboutText setRef={handleAboutRef} />
