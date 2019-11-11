@@ -3,8 +3,8 @@ import styled, { ThemeProvider } from "styled-components"
 import MEDIA from "../utils/mediatemplates"
 import Button from "./button"
 // import { TweenMax } from "gsap/all"
-import { TweenMax } from "gsap/umd/TweenMax";
-import ScrollToPlugin from "gsap/umd/ScrollToPlugin";
+import { TweenMax } from "gsap/umd/TweenMax"
+import ScrollToPlugin from "gsap/umd/ScrollToPlugin"
 
 const NavWrapper = styled.div`
   order: 1;
