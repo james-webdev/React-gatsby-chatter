@@ -2,9 +2,8 @@ import React from "react"
 import styled, { ThemeProvider } from "styled-components"
 import MEDIA from "../utils/mediatemplates"
 import Button from "./button"
-// import { TweenMax } from "gsap/all"
-import { TweenMax } from "gsap/umd/TweenMax";
-import ScrollToPlugin from "gsap/umd/ScrollToPlugin";
+import { TweenLite, ScrollToPlugin } from "gsap/all";
+const plugins = [ TweenLite, ScrollToPlugin ];
 
 const NavWrapper = styled.div`
   order: 1;
@@ -69,8 +68,9 @@ const Nav = ({ menuOpen, aboutRef, introRef, contactRef }) => {
     if (e) {
       e.preventDefault()
     }
+    console.log('click on ', refName);
     const ref = refs[refName]
-    TweenMax.to(window, 0.2, { scrollTo: { y: ref, autoKill: false } })
+    TweenLite.to(window, 0.2, { scrollTo: { y: ref, autoKill: false } })
   }
 
   return (
